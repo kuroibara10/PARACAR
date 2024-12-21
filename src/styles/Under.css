@@ -1,0 +1,63 @@
+.has-scrollbar {
+  display: flex;
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  overflow-x: scroll;
+  white-space: nowrap;
+  gap: 7px;
+  margin: 20px;
+}
+.has-scrollbar::-webkit-scrollbar {
+  height: 5px;
+}
+.has-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+.shop-card {
+  width: 250px;
+  height: 430px;
+  text-align: center;
+  align-items: center;
+}
+.card-banner {
+  width: 220px;
+  height: 320px;
+  margin: -10px;
+}
+.card-banner img {
+  width: 200px;
+  height: 300px;
+  margin-left: 30px;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.card-content p a {
+  text-align: center;
+  align-items: center;
+}
+/* h3 {
+  font-weight: 400;
+  margin-right: 70px;
+}
+h3 a {
+  color: rgb(56, 52, 52);
+  size: 1cm;
+} */
+.badge {
+  /* position: absolute;
+  background-color: green;
+  width: 30px; */
+  max-width: max-content;
+  background-color: hsl(148, 20%, 38%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  padding-inline: 12px;
+  border-radius: 3px;
+}

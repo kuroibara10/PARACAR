@@ -1,0 +1,78 @@
+import React, { useState } from "react";
+import "../styles/Products.css";
+import imgClos from "../components/assets/icons/close.png";
+import { listProducts } from "../dates/listProducts";
+function Products() {
+  const [detialss, setDetialss] = useState(false);
+  const [prod, setProd] = useState("Product1");
+  const [bgColor, setBgColor] = useState("lightblue");
+  const produit = listProducts.find((item) => item.nameProduct === prod);
+
+  let colorBck = "#fff";
+  const descriptionpP = (x) => {
+    setDetialss(true);
+    setProd(x);
+    setBgColor(bgColor === "lightblue" ? "lightgreen" : "lightblue");
+  };
+  const descriptionpPP = () => {
+    setDetialss(false);
+  };
+  return (
+    <div className="backgroundPage">
+      <div className="ffff">
+        {detialss && (
+          <div className="desc">
+            <img className="imgClose" src={imgClos} onClick={descriptionpPP} />
+            <div className="containerD">
+              <div className="box_one">
+                <div className="details">
+                  <div className="topic">Description</div>
+                  <p>{produit.description}</p>
+                  <div className="rating"></div>
+                  <div className="price-box">
+                    <div className="discount">400.00 MAD</div>
+                    <div className="price">{produit.prix} MAD</div>
+                  </div>
+                </div>
+                <div className="button1">
+                  <button>Add To Cart</button>
+                </div>
+              </div>
+              <div className="box_two">
+                <div className="image-box">
+                  <div className="image">
+                    <img src={produit.photoProduct} />
+                  </div>
+                  <div className="info">
+                    <div className="brand">skin care</div>
+                    <div className="name">Facial cleanser</div>
+                    <div className="button2">
+                      <button>Login For More</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+      <div className="products">
+        <h1>All Products</h1>
+        <div className="cProducts">
+          {listProducts.map((product) => (
+            <div
+              className="product"
+              onClick={() => descriptionpP(product.nameProduct)}
+            >
+              <img src={product.photoProduct} />
+              <h3>{product.nameProduct}</h3>
+              <p>{product.prix} MAD</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Products;

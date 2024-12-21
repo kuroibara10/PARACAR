@@ -1,0 +1,42 @@
+a {
+  text-decoration: none;
+}
+.collection {
+  background-color: #fff;
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+}
+
+.item {
+  width: 400px;
+  height: 420px;
+  padding: 0px 20px 0px 20px;
+  text-align: left;
+}
+.item img {
+  width: 200px;
+}
+
+.collection h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.collection p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.btn_link {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 250px;
+}
+
+.btn_link:hover {
+  text-decoration: underline;
+}

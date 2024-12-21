@@ -1,0 +1,59 @@
+.shop {
+  padding: 40px 20px;
+  background-color: #fafafa;
+}
+
+.shop h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.shop-list {
+  display: flex;
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  overflow-x: scroll;
+  white-space: nowrap;
+  gap: 5px;
+  margin: 20px;
+}
+.shop-list::-webkit-scrollbar {
+  height: 5px;
+}
+.shop-list::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.shop-card {
+  background-color: white;
+  height: 400px;
+  text-align: center;
+  padding: 20px;
+  width: 450px;
+  transition: transform 0.3s ease;
+}
+
+.shop-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shop-card img {
+  width: 190px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.shop-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.shop-card p {
+  color: #666;
+  font-size: 16px;
+}

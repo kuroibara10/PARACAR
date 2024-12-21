@@ -1,0 +1,113 @@
+/* General footer styles */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #000;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+}
+
+/* Each section in the footer */
+.footer-section {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.footer-section h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-link {
+  color: #000;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Email subscription section */
+.footer-email {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-email h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-email-input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.email-input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.subscribe-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.subscribe-button:hover {
+  background-color: #333;
+}
+
+/* Payment logos */
+.payment-logos {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.payment-logos img {
+  height: 24px;
+  width: auto;
+  margin: 30px;
+}
+.footer-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  align-items: center;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+.footer-bottom .wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px;
+}
+a {
+  color: black;
+}
+.logo_web img {
+  width: 200px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
