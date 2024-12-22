@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../styles/AdminPage.css";
-import { listProducts } from "../dates/listProducts";
+// import { listProducts } from "../dates/listProducts";
 
-const AdminPage = () => {
-  const [products, setProducts] = useState(listProducts);
+const AdminPage = ({ products, setProducts }) => {
+  // const [products, setProducts] = useState(listProducts);
 
   const [form, setForm] = useState({
     id: null,

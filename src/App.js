@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Collection from "./components/Collection";
@@ -12,17 +12,24 @@ import Home from "./pages/Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Products from "./pages/Products";
 import AdminPage from "./pages/Admin";
+import { listProducts } from "./dates/listProducts";
 
 function App() {
+  const [products, setProducts] = useState(listProducts);
   return (
     <div className="App">
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
+          <Route path="/" element={<Home products={products} />} />
+          <Route path="/products" element={<Products products={products} />} />
           {/* <Route path="/join" element={<JoinPage />} /> */}
-          <Route path="/admin" element={<AdminPage />} />
+          <Route
+            path="/admin"
+            element={
+              <AdminPage products={products} setProducts={setProducts} />
+            }
+          />
         </Routes>
         <Footer />
       </Router>

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "../styles/Products.css";
 import imgClos from "../components/assets/icons/close.png";
-import { listProducts } from "../dates/listProducts";
-function Products() {
+// import { listProducts } from "../dates/listProducts";
+function Products({ products }) {
   const [detialss, setDetialss] = useState(false);
   const [prod, setProd] = useState("Product1");
   const [bgColor, setBgColor] = useState("lightblue");
-  const produit = listProducts.find((item) => item.nameProduct === prod);
+  const produit = products.find((item) => item.nameProduct === prod);
 
   let colorBck = "#fff";
   const descriptionpP = (x) => {
@@ -59,7 +59,7 @@ function Products() {
       <div className="products">
         <h1>All Products</h1>
         <div className="cProducts">
-          {listProducts.map((product) => (
+          {products.map((product) => (
             <div
               className="product"
               onClick={() => descriptionpP(product.nameProduct)}

@@ -1,10 +1,10 @@
 import React from "react";
 import "../styles/Under.css";
-import { listProducts } from "../dates/listProducts";
+// import { listProducts } from "../dates/listProducts";
 import { Link } from "react-router-dom";
 
-function Under() {
-  const produit = listProducts.filter((item) => item.prix <= 250);
+function Under({ products }) {
+  const produit = products.filter((item) => item.prix <= 250);
 
   return (
     <section className="section shop" id="shop" aria-label="shop" data-section>

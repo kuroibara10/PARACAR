@@ -8,13 +8,13 @@ import About from "../components/About";
 import Discover from "../components/Discover";
 import OfferSection from "../components/OfferSection";
 
-function Home() {
+function Home({ products }) {
   return (
     <div>
       <Hero />
       <Collection />
       <Shop />
-      <Under />
+      <Under products={products} />
       <OfferSection />
       <About />
       <Discover />
