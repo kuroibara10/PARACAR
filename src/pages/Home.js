@@ -14,7 +14,7 @@ function Home({ products }) {
       <Hero />
       <Collection />
       {/* <Collection2 /> */}
-      <Shop />
+      <Shop products={products} />
       <Under products={products} />
       <OfferSection />
       <About />

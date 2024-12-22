@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/AdminPage.css";
 
-const AdminPage = ({ products, setProducts }) => {
+const AdminPage = ({ products, setProducts, loginn, setLogiin, clients }) => {
   const [form, setForm] = useState({
     id: null,
     nameProduct: "",

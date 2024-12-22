@@ -1,8 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/LogInSingIn.css";
 import imgg from "../components/assets/images/banner-2.jpg";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
-function LogInSingIn() {
+function LogInSingIn({ loginn, setLogiin, clients, setGmaille, adminss }) {
+  const [gmaile, setGmaile] = useState("");
+  const [password, setPassword] = useState("");
+  const [verification, setVerification] = useState(false);
+  const navigate = useNavigate();
+  const handlValid = (e) => {
+    e.preventDefault();
+    const setClients = clients.find((clien) => clien.gmailC === gmaile);
+    const setAdmine = adminss.find((admi) => admi.gmailA === gmaile);
+
+    if (setClients) {
+      console.log("Vrai");
+      if (setClients.passwordC == password) {
+        console.log("m vrai");
+        setVerification(true);
+        setLogiin(true);
+        setGmaille(gmaile);
+        navigate("/");
+      } else {
+        console.log("m faux");
+      }
+    } else if (setAdmine) {
+      console.log("Vrai");
+      if (setAdmine.passwordA == password) {
+        console.log("m vrai");
+        setVerification(true);
+        setLogiin(true);
+        setGmaille(gmaile);
+        navigate("/");
+      } else {
+        console.log("m faux");
+        setVerification(true);
+      }
+    } else {
+      console.log("Faux");
+      setVerification(true);
+    }
+  };
+
   return (
     <div className="containerLogin">
       <input type="checkbox" id="flip" />
@@ -30,17 +69,34 @@ function LogInSingIn() {
         <div className="form-content">
           <div className="login-form">
             <div className="title">Login</div>
-            <form action="index.html">
+            <form onSubmit={handlValid}>
               <div className="input-boxes">
+                {verification ? (
+                  <div className="text sign-up-text">
+                    Password error gmail error
+                  </div>
+                ) : (
+                  <div className="text sign-up-text"></div>
+                )}
                 <div className="input-box">
                   <i className="fas fa-envelope"></i>
-                  <input type="text" placeholder="Enter your email" required />
+                  <input
+                    type="gmail"
+                    placeholder="Enter your email"
+                    onChange={(e) => {
+                      setGmaile(e.target.value);
+                    }}
+                    required
+                  />
                 </div>
                 <div className="input-box">
                   <i className="fas fa-lock"></i>
                   <input
                     type="password"
                     placeholder="Enter your password"
+                    onChange={(e) => {
+                      setPassword(e.target.value);
+                    }}
                     required
                   />
                 </div>
@@ -60,7 +116,7 @@ function LogInSingIn() {
           </div>
           <div className="signup-form">
             <div className="title">Signup</div>
-            <form action="login-forme.html">
+            <form onSubmit={handlValid}>
               <div className="input-boxes">
                 <div className="input-box">
                   <i className="fas fa-user"></i>

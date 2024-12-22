@@ -17,7 +17,7 @@ export const listProducts = [
     photoProduct: product1,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur corporis vitae nobis, ut veniam earum expedita eaque at placeat perferendis unde voluptates explicabo rerum distinctio quis, illo, porro et?",
-    prix: 20,
+    prix: 200,
     reviews: 5170,
   },
   {
@@ -26,8 +26,8 @@ export const listProducts = [
     photoProduct: product2,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur corporis vitae nobis, ut veniam earum expedita eaque at placeat perferendis unde voluptates explicabo rerum distinctio quis, illo, porro et?",
-    prix: 20,
-    reviews: 5170,
+    prix: 250,
+    reviews: 5700,
   },
   {
     id: 3,
@@ -35,8 +35,8 @@ export const listProducts = [
     photoProduct: product3,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur corporis vitae nobis, ut veniam earum expedita eaque at placeat perferendis unde voluptates explicabo rerum distinctio quis, illo, porro et?",
-    prix: 20,
-    reviews: 5170,
+    prix: 220,
+    reviews: 5100,
   },
   {
     id: 4,
@@ -44,8 +44,8 @@ export const listProducts = [
     photoProduct: product4,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur corporis vitae nobis, ut veniam earum expedita eaque at placeat perferendis unde voluptates explicabo rerum distinctio quis, illo, porro et?",
-    prix: 20,
-    reviews: 5170,
+    prix: 400,
+    reviews: 3170,
   },
   {
     id: 5,
@@ -53,8 +53,8 @@ export const listProducts = [
     photoProduct: product5,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur corporis vitae nobis, ut veniam earum expedita eaque at placeat perferendis unde voluptates explicabo rerum distinctio quis, illo, porro et?",
-    prix: 20,
-    reviews: 5170,
+    prix: 500,
+    reviews: 5370,
   },
   {
     id: 6,
@@ -62,8 +62,8 @@ export const listProducts = [
     photoProduct: product6,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur corporis vitae nobis, ut veniam earum expedita eaque at placeat perferendis unde voluptates explicabo rerum distinctio quis, illo, porro et?",
-    prix: 20,
-    reviews: 5170,
+    prix: 210,
+    reviews: 5270,
   },
   {
     id: 7,
@@ -71,8 +71,8 @@ export const listProducts = [
     photoProduct: product7,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur corporis vitae nobis, ut veniam earum expedita eaque at placeat perferendis unde voluptates explicabo rerum distinctio quis, illo, porro et?",
-    prix: 20,
-    reviews: 5170,
+    prix: 200,
+    reviews: 4170,
   },
   {
     id: 8,
@@ -80,7 +80,7 @@ export const listProducts = [
     photoProduct: product8,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur corporis vitae nobis, ut veniam earum expedita eaque at placeat perferendis unde voluptates explicabo rerum distinctio quis, illo, porro et?",
-    prix: 20,
+    prix: 220,
     reviews: 5170,
   },
   {
@@ -89,8 +89,8 @@ export const listProducts = [
     photoProduct: product9,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur corporis vitae nobis, ut veniam earum expedita eaque at placeat perferendis unde voluptates explicabo rerum distinctio quis, illo, porro et?",
-    prix: 20,
-    reviews: 5170,
+    prix: 710,
+    reviews: 8170,
   },
   {
     id: 10,
@@ -98,8 +98,8 @@ export const listProducts = [
     photoProduct: product10,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur corporis vitae nobis, ut veniam earum expedita eaque at placeat perferendis unde voluptates explicabo rerum distinctio quis, illo, porro et?",
-    prix: 20,
-    reviews: 5170,
+    prix: 290,
+    reviews: 2170,
   },
   {
     id: 11,
@@ -107,7 +107,7 @@ export const listProducts = [
     photoProduct: product11,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur corporis vitae nobis, ut veniam earum expedita eaque at placeat perferendis unde voluptates explicabo rerum distinctio quis, illo, porro et?",
-    prix: 20,
-    reviews: 5170,
+    prix: 230,
+    reviews: 7170,
   },
 ];

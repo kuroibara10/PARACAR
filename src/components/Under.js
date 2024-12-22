@@ -36,7 +36,7 @@ function Under({ products }) {
                   <div className="card-content">
                     <div className="price">
                       <del className="del">330.00 MAD</del>
-
+                      <br />
                       <span className="span">{product.prix} MAD</span>
                     </div>
 
