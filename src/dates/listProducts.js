@@ -18,6 +18,7 @@ export const listProducts = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur corporis vitae nobis, ut veniam earum expedita eaque at placeat perferendis unde voluptates explicabo rerum distinctio quis, illo, porro et?",
     prix: 20,
+    reviews: 5170,
   },
   {
     id: 2,
@@ -26,6 +27,7 @@ export const listProducts = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur corporis vitae nobis, ut veniam earum expedita eaque at placeat perferendis unde voluptates explicabo rerum distinctio quis, illo, porro et?",
     prix: 20,
+    reviews: 5170,
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ export const listProducts = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur corporis vitae nobis, ut veniam earum expedita eaque at placeat perferendis unde voluptates explicabo rerum distinctio quis, illo, porro et?",
     prix: 20,
+    reviews: 5170,
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ export const listProducts = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur corporis vitae nobis, ut veniam earum expedita eaque at placeat perferendis unde voluptates explicabo rerum distinctio quis, illo, porro et?",
     prix: 20,
+    reviews: 5170,
   },
   {
     id: 5,
@@ -50,6 +54,7 @@ export const listProducts = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur corporis vitae nobis, ut veniam earum expedita eaque at placeat perferendis unde voluptates explicabo rerum distinctio quis, illo, porro et?",
     prix: 20,
+    reviews: 5170,
   },
   {
     id: 6,
@@ -58,6 +63,7 @@ export const listProducts = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur corporis vitae nobis, ut veniam earum expedita eaque at placeat perferendis unde voluptates explicabo rerum distinctio quis, illo, porro et?",
     prix: 20,
+    reviews: 5170,
   },
   {
     id: 7,
@@ -66,6 +72,7 @@ export const listProducts = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur corporis vitae nobis, ut veniam earum expedita eaque at placeat perferendis unde voluptates explicabo rerum distinctio quis, illo, porro et?",
     prix: 20,
+    reviews: 5170,
   },
   {
     id: 8,
@@ -74,6 +81,7 @@ export const listProducts = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur corporis vitae nobis, ut veniam earum expedita eaque at placeat perferendis unde voluptates explicabo rerum distinctio quis, illo, porro et?",
     prix: 20,
+    reviews: 5170,
   },
   {
     id: 9,
@@ -82,6 +90,7 @@ export const listProducts = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur corporis vitae nobis, ut veniam earum expedita eaque at placeat perferendis unde voluptates explicabo rerum distinctio quis, illo, porro et?",
     prix: 20,
+    reviews: 5170,
   },
   {
     id: 10,
@@ -90,6 +99,7 @@ export const listProducts = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur corporis vitae nobis, ut veniam earum expedita eaque at placeat perferendis unde voluptates explicabo rerum distinctio quis, illo, porro et?",
     prix: 20,
+    reviews: 5170,
   },
   {
     id: 11,
@@ -98,5 +108,6 @@ export const listProducts = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consequatur corporis vitae nobis, ut veniam earum expedita eaque at placeat perferendis unde voluptates explicabo rerum distinctio quis, illo, porro et?",
     prix: 20,
+    reviews: 5170,
   },
 ];
