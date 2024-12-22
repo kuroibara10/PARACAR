@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/Under.css";
-// import { listProducts } from "../dates/listProducts";
 import { Link } from "react-router-dom";
 
 function Under({ products }) {

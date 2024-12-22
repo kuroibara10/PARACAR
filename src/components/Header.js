@@ -15,7 +15,11 @@ function Header() {
       <div className="header2">
         <div className="header2_1">
           <div className="barSerch">
-            <input type="searche" placeholder="Search ... " />
+            <input
+              type="searche"
+              placeholder="Search ... "
+              className="search_field"
+            />
             <img src={icon_search} alt="Icon Search" />
           </div>
           <div className="logo_web">
@@ -29,14 +33,20 @@ function Header() {
           </div>
         </div>
         <div className="header2_2">
-          <ul>
-            <Link to={`/`}>Home</Link>
-            <Link>Collection</Link>
-            <Link to={`/products`}>Products</Link>
-            <Link>Shop</Link>
-            <Link>Offer</Link>
-            <Link>Blog</Link>
-            <Link to={`/admin`}>AdminPage</Link>
+          <ul className="list_pages">
+            <Link to={`/`} className="list_links">
+              Home
+            </Link>
+            <Link className="list_links">Collection</Link>
+            <Link to={`/products`} className="list_links">
+              Products
+            </Link>
+            <Link className="list_links">Shop</Link>
+            <Link className="list_links">Offer</Link>
+            {/* <Link className="list_links">Blog</Link> */}
+            <Link to={`/admin`} className="list_links">
+              AdminPage
+            </Link>
           </ul>
         </div>
       </div>

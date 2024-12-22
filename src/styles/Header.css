@@ -16,6 +16,16 @@ a {
   align-items: center;
   gap: 10px;
 }
+.header2_1 .search_field {
+  width: 150px;
+  font-size: 0.8rem;
+  border: 2px solid hsl(148, 20%, 38%, 0.2);
+  border-radius: 3px;
+  padding: 5px 10px;
+  padding-inline-end: 20px;
+  outline: none;
+  transition: 0.25s ease;
+}
 .header2_1 .barSerch img {
   width: 20px;
   height: 20px;
@@ -50,9 +60,17 @@ a {
   justify-content: space-around;
   gap: 30px;
 } */
-.header2_2 ul {
+
+.header2_2 {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: hsl(0, 0%, 100%);
+  padding-block: 18px;
+  z-index: 4;
+}
+.header2_2 .list_pages {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  gap: 50px;
+  gap: 45px;
 }

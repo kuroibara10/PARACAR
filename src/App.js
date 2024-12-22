@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Collection from "./components/Collection";
-import Shop from "./components/Shop";
 import Footer from "./components/Footer";
-import Under from "./components/Under";
-import About from "./components/About";
-import Discover from "./components/Discover";
 import Home from "./pages/Home";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";

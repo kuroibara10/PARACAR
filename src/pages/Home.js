@@ -13,6 +13,7 @@ function Home({ products }) {
     <div>
       <Hero />
       <Collection />
+      {/* <Collection2 /> */}
       <Shop />
       <Under products={products} />
       <OfferSection />
