@@ -7,8 +7,11 @@ import product8 from "./assets/images/product-08.jpg";
 import product9 from "./assets/images/product-09.jpg";
 import product10 from "./assets/images/product-10.jpg";
 import product11 from "./assets/images/product-11.jpg";
+import { listProducts } from "../dates/listProducts";
 
 function Under() {
+  const produit = listProducts.find((item) => item.prix >= 250);
+
   return (
     <section className="section shop" id="shop" aria-label="shop" data-section>
       <div className="container">
@@ -19,8 +22,45 @@ function Under() {
             <span className="span">Shop All Products</span>
           </a>
         </div>
-
         <ul className="has-scrollbar">
+          {listProducts.map((product) => (
+            <li className="scrollbar-item">
+              <div className="shop-card">
+                <div className="card-banner">
+                  <img
+                    src={product.photoProduct}
+                    width="540"
+                    height="720"
+                    loading="lazy"
+                    alt="Facial cleanser"
+                    className="img-cover"
+                  />
+                </div>
+                <span className="badge" aria-label="20% off">
+                  -20%
+                </span>
+                <div className="card-content">
+                  <div className="price">
+                    <del className="del">330.00 MAD</del>
+
+                    <span className="span">{product.prix} MAD</span>
+                  </div>
+
+                  <p>
+                    <a href="product-7-page.html" className="cardtitle">
+                      {product.nameProduct}
+                    </a>
+                  </p>
+
+                  <div className="card-rating">
+                    <p className="rating-text">5170 reviews</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+        {/* <ul className="has-scrollbar">
           <li className="scrollbar-item">
             <div className="shop-card">
               <div className="card-banner">
@@ -215,7 +255,7 @@ function Under() {
               </div>
             </div>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </section>
   );
