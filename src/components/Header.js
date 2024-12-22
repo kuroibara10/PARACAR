@@ -28,7 +28,9 @@ function Header() {
             </Link>
           </div>
           <div className="userShop">
-            <img src={icon_user} alt="Icon User" />
+            <Link to={`/join`}>
+              <img src={icon_user} alt="Icon User" />
+            </Link>
             <img src={icon_shop} alt="Icon Shop" />
           </div>
         </div>

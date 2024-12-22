@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import LogInSingIn from "./pages/LogInSingIn";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Products from "./pages/Products";
@@ -17,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home products={products} />} />
           <Route path="/products" element={<Products products={products} />} />
-          {/* <Route path="/join" element={<JoinPage />} /> */}
+          <Route path="/join" element={<LogInSingIn />} />
           <Route
             path="/admin"
             element={
