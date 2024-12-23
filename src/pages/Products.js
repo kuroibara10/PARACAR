@@ -17,6 +17,26 @@ function Products({ products }) {
   const descriptionpPP = () => {
     setDetialss(false);
   };
+  const [nameSearch, setNameSearch] = useState("");
+  const [priceSearch, setPriceSearch] = useState("");
+  const [reviewsSearch, setReviewsSearch] = useState("");
+  const [filteredProducts, setFilteredProducts] = useState(products);
+
+  const handleSearch = () => {
+    setFilteredProducts(
+      products.filter((product) => {
+        const nameMatch =
+          nameSearch === "" ||
+          product.nameProduct.toLowerCase() === nameSearch.toLowerCase();
+        const priceMatch =
+          priceSearch === "" || product.prix <= parseFloat(priceSearch);
+        const reviewsMatch =
+          reviewsSearch === "" || product.reviews <= parseFloat(reviewsSearch);
+        return nameMatch && priceMatch && reviewsMatch;
+      })
+    );
+  };
+
   return (
     <div className="backgroundPage">
       <div className="ffff">
@@ -58,8 +78,29 @@ function Products({ products }) {
       </div>
       <div className="products">
         <h1>All Products</h1>
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Search by name..."
+            value={nameSearch}
+            onChange={(e) => setNameSearch(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Search by price..."
+            value={priceSearch}
+            onChange={(e) => setPriceSearch(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Search by reviews..."
+            value={reviewsSearch}
+            onChange={(e) => setReviewsSearch(e.target.value)}
+          />
+          <button onClick={handleSearch}>Search</button>
+        </div>
         <div className="cProducts">
-          {products.map((product) => (
+          {filteredProducts.map((product) => (
             <div
               className="product"
               onClick={() => descriptionpP(product.nameProduct)}
@@ -67,6 +108,7 @@ function Products({ products }) {
               <img src={product.photoProduct} />
               <h3>{product.nameProduct}</h3>
               <p>{product.prix} MAD</p>
+              <p>{product.reviews} reviews</p>
             </div>
           ))}
         </div>
