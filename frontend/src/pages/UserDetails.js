@@ -1,14 +1,12 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "../styles/UserDetails.css";
-import { UserContext } from "../UserContext";
 
-const UserDetails = ({ setClients }) => {
+const UserDetails = () => {
   const { id } = useParams(); // الحصول على ID من الرابط
   const [userInfo, setUserInfo] = useState([]);
   const [photo, setPhoto] = useState(null);
-  const { customer } = useContext(UserContext);
   const [ordress, setOrdress] = useState([]);
 
   useEffect(() => {
@@ -19,7 +17,6 @@ const UserDetails = ({ setClients }) => {
           `http://localhost:5000/api/users/${id}`
         );
         setUserInfo(response.data);
-        setClients(userInfo);
       } catch (err) {
         console.error("Error fetching user info:", err);
       }
@@ -72,22 +69,6 @@ const UserDetails = ({ setClients }) => {
     }
   };
 
-  // useEffect(() => {
-  //   fetchsetOrdress();
-  // }, []);
-
-  // const fetchsetOrdress = async () => {
-  //   try {
-  //     const response = await axios.get("http://localhost:5000/api/orders");
-  //     const filteredOrders = response.data.filter(
-  //       (order) => order.customerEmail === userInfo.email
-  //     );
-  //     setOrdress(filteredOrders);
-  //   } catch (error) {
-  //     console.error("Error fetching orders:", error);
-  //   }
-  // };
-
   return (
     <div className="userDet">
       <h1>Welcome Client</h1>
@@ -116,14 +97,6 @@ const UserDetails = ({ setClients }) => {
                   <button type="submit" className="btn btn-primary">
                     Upload
                   </button>
-                  {/* <div>
-                {customer && (
-                  <div>
-                    <h1>Email : {customer.email}</h1>
-                    <p>Id : {customer.id}</p>
-                  </div>
-                )}
-              </div> */}
                 </form>
               </div>
             </div>

@@ -2,35 +2,12 @@ import "../styles/Payement.css";
 import credit_card from "./assets/Payment_Method/credit_card.png";
 import paypal from "./assets/Payment_Method/paypal.png";
 import payoneer from "./assets/Payment_Method/payoneer.png";
-import React, { useEffect, useState, useContext } from "react";
-import axios from "axios";
-import { useParams, useNavigate, useLocation } from "react-router-dom";
-import { UserContext } from "../UserContext";
+import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 
-function Payement({ setClients, orderc, setOrderc }) {
-  const { id } = useParams(); // الحصول على ID من الرابط
-  const [userInfo, setUserInfo] = useState(null);
-  const { customer } = useContext(UserContext);
-
+function Payement() {
   const location = useLocation();
   const { ordercu } = location.state || {};
-
-  setClients(userInfo);
-  useEffect(() => {
-    // جلب معلومات المستخدم بناءً على ID
-    const fetchUserInfo = async () => {
-      try {
-        const response = await axios.get(
-          `http://localhost:5000/api/users/${id}`
-        );
-        setUserInfo(response.data);
-      } catch (err) {
-        console.error("Error fetching user info:", err);
-      }
-    };
-
-    fetchUserInfo();
-  }, [id]);
 
   //   const navigate = useNavigate();
   const [activeForm, setActiveForm] = useState("");

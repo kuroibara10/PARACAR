@@ -2,12 +2,9 @@ import "../styles/AdminPage.css";
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { confirmAlert } from "react-confirm-alert"; // استيراد المكتبة
 import "react-confirm-alert/src/react-confirm-alert.css"; // استيراد الأنماط
 
-const AdminPage = ({ products, setProducts, fetchProducts }) => {
-  const [editMode, setEditMode] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState(null);
+const AdminPage = ({ products, fetchProducts }) => {
   const [error, setError] = useState("");
 
   const [nameProduct, setNameProduct] = useState("");

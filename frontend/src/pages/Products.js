@@ -151,9 +151,6 @@ function Products({ products, loginn, cartVisible, setCartVisible }) {
                     <div className="name">Facial cleanser</div>
                     {loginn ? (
                       <div className="button2">
-                        {/* <Link to={`/payem`}>
-                          <button>buying</button>
-                        </Link> */}
                         <button onClick={() => handleBuyNow(produit)}>
                           Buying
                         </button>

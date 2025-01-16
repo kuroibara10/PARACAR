@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from "react";
 import "../styles/Header.css";
 import logo from "./assets/images/logo.png";
 import icon_user from "./assets/icons/user (1).png";
-import icon_search from "./assets/icons/search22.png";
 import icon_shop from "./assets/icons/shopping-cart.png";
 import { Link } from "react-router-dom";
 import logout from "./assets/icons/logout.png";
@@ -54,14 +53,6 @@ function Header({
       </div>
       <div className="header2">
         <div className="header2_1">
-          {/* <div className="barSerch">
-            <input
-              type="search"
-              placeholder="Search ..."
-              className="search_field"
-            />
-            <img src={icon_search} alt="Icon Search" />
-          </div> */}
           <div className="logo_web">
             <Link to={`/`}>
               <img src={logo} alt="logo" />
@@ -85,7 +76,6 @@ function Header({
                 ) : (
                   <div className="userShop">
                     <Link to={`/client/${userInfo._id}`}>
-                      {/* <img src={userInfo.photo} alt="Client User" /> */}
                       <img
                         src={`http://localhost:5000/${userInfo.photo}`}
                         alt="Client User"
@@ -135,15 +125,6 @@ function Header({
                 <Link to={`/products`} className="list_links">
                   Products
                 </Link>
-                {/* <Link to={`/collection`} className="list_links">
-                  Collection
-                </Link>
-                <Link to={`/shop`} className="list_links">
-                  Shop
-                </Link>
-                <Link to={`/offer`} className="list_links">
-                  Offer
-                </Link> */}
               </ul>
             )
           ) : (
@@ -154,15 +135,6 @@ function Header({
               <Link to={`/products`} className="list_links">
                 Products
               </Link>
-              {/* <Link to={`/collection`} className="list_links">
-                Collection
-              </Link>
-              <Link to={`/shop`} className="list_links">
-                Shop
-              </Link>
-              <Link to={`/offer`} className="list_links">
-                Offer
-              </Link> */}
             </ul>
           )}
         </div>
