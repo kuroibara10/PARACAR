@@ -1,0 +1,49 @@
+.container_pp {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  line-height: 1.6;
+}
+
+.container_pp h1 {
+  font-size: 2rem;
+  color: #4caf50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container_pp h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.section_pp {
+  margin-bottom: 20px;
+}
+
+.section_pp p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.section_pp ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.section_pp ul ul {
+  list-style: circle;
+}
+
+.section_pp ul li {
+  margin-bottom: 10px;
+}
+
+.section_pp ul li strong {
+  color: #4caf50;
+}
