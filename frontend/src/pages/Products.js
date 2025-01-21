@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import "../styles/Products.css";
 import imgClos from "../components/assets/icons/close.png";
+import unavailable from "../components/assets/images/unavailable4.png";
 import cartIcon from "../components/assets/icons/shopping-cart.png";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../UserContext";
@@ -106,6 +107,9 @@ function Products({ products, loginn, cartVisible, setCartVisible }) {
 
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+  // const [unavaib, setUnavaib] = useState("");
+  // if ()
+
   return (
     <div className="backgroundPage">
       <div className="ffff">
@@ -130,11 +134,19 @@ function Products({ products, loginn, cartVisible, setCartVisible }) {
                 </div>
                 <div className="button1">
                   {loginn && (
-                    <button
-                      onClick={() => addToCart(produit, produit.nameProduct)}
-                    >
-                      Add To Cart
-                    </button>
+                    <div>
+                      {produit.discount === 0 ? (
+                        <h1>This Product unavailable</h1>
+                      ) : (
+                        <button
+                          onClick={() =>
+                            addToCart(produit, produit.nameProduct)
+                          }
+                        >
+                          Add To Cart
+                        </button>
+                      )}
+                    </div>
                   )}
                 </div>
               </div>
@@ -150,10 +162,16 @@ function Products({ products, loginn, cartVisible, setCartVisible }) {
                     <div className="brand">skin care</div>
                     <div className="name">Facial cleanser</div>
                     {loginn ? (
-                      <div className="button2">
-                        <button onClick={() => handleBuyNow(produit)}>
-                          Buying
-                        </button>
+                      <div>
+                        {produit.discount === 0 ? (
+                          <h1>This Product unavailable</h1>
+                        ) : (
+                          <div className="button2">
+                            <button onClick={() => handleBuyNow(produit)}>
+                              Buying
+                            </button>
+                          </div>
+                        )}
                       </div>
                     ) : (
                       <div className="button2">
@@ -228,11 +246,44 @@ function Products({ products, loginn, cartVisible, setCartVisible }) {
             <div
               className="product"
               onClick={() => descriptionpP(product.nameProduct)}
+              style={{ position: "relative" }}
             >
               <img
                 src={`http://localhost:5000/${product.photoProduct}`}
                 alt={`${product.nameProduct}`}
               />
+              {product.discount === 0 && (
+                <div>
+                  <img
+                    src={`${unavailable}`}
+                    style={{
+                      zIndex: 6,
+                      position: "absolute",
+                      left: "2px",
+                      bottom: "280px",
+                    }}
+                  />
+                  <img
+                    src={`${unavailable}`}
+                    style={{
+                      zIndex: 6,
+                      position: "absolute",
+                      left: "2px",
+                      bottom: "180px",
+                    }}
+                  />
+                  <img
+                    src={`${unavailable}`}
+                    style={{
+                      zIndex: 6,
+                      position: "absolute",
+                      left: "2px",
+                      bottom: "80px",
+                    }}
+                  />
+                </div>
+              )}
+
               <h3>{product.nameProduct}</h3>
               <p>{product.prix} MAD</p>
               <p>{product.reviews} reviews</p>

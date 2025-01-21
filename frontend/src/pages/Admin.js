@@ -3,6 +3,7 @@ import "../styles/AdminPage.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "react-confirm-alert/src/react-confirm-alert.css"; // استيراد الأنماط
+import imgClos from "../components/assets/icons/close.png";
 
 const AdminPage = ({ products, fetchProducts }) => {
   const [error, setError] = useState("");
@@ -63,6 +64,35 @@ const AdminPage = ({ products, fetchProducts }) => {
 
       // تحديث قائمة المنتجات بعد الحذف
       fetchProducts();
+    } catch (err) {
+      console.error(err);
+      alert(err.response?.data?.message || "Failed to delete product.");
+    }
+  };
+
+  // Show statu Product
+  const [prod, setProd] = useState("Product1");
+  // const descriptionpP = (x) => {
+  //   setDetialss(true);
+  //   setProd(x);
+  //   setBgColor(bgColor === "lightblue" ? "lightgreen" : "lightblue");
+  // };
+  const produit = products.find((item) => item.nameProduct === prod);
+  const [detialss, setDetialss] = useState(false);
+  const [bgColor, setBgColor] = useState("lightblue");
+  const descriptionpP = (x) => {
+    setDetialss(true);
+    setProd(x);
+    setBgColor(bgColor === "lightblue" ? "lightgreen" : "lightblue");
+  };
+
+  const descriptionpPP = () => {
+    setDetialss(false);
+  };
+  const showStatueProduct = async (id) => {
+    try {
+      await axios.get(`http://localhost:5000/api/products/${id}`);
+      alert("Product !");
     } catch (err) {
       console.error(err);
       alert(err.response?.data?.message || "Failed to delete product.");
@@ -149,6 +179,50 @@ const AdminPage = ({ products, fetchProducts }) => {
   ////////////////////////////////////////////////////////////////////////
   return (
     <div className="admin-page">
+      <div className="ffff">
+        {detialss && (
+          <div className="desc">
+            <img
+              className="imgClose"
+              src={imgClos}
+              alt="close"
+              onClick={descriptionpPP}
+            />
+            <div className="containerD">
+              <div className="box_one">
+                <div className="details">
+                  <div className="topic">Description</div>
+                  <p>{produit.description}</p>
+                  <div className="rating"></div>
+                  <div className="price-box">
+                    <div className="discount">400.00 MAD</div>
+                    <div className="price">{produit.prix} MAD</div>
+                  </div>
+                  <div className="price-box">
+                    <div className="discount">Nomber Available:</div>
+                    <div className="price">{produit.discount}</div>
+                  </div>
+                </div>
+                <div className="button1"></div>
+              </div>
+              <div className="box_two">
+                <div className="image-box">
+                  <div className="image">
+                    <img
+                      src={`http://localhost:5000/${produit.photoProduct}`}
+                      alt={`${produit.nameProduct}`}
+                    />
+                  </div>
+                  <div className="info">
+                    <div className="brand">skin care</div>
+                    <div className="name">Facial cleanser</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
       <h1>Admin Page</h1>
       <div className="ProductOrders">
         <button
@@ -338,7 +412,16 @@ const AdminPage = ({ products, fetchProducts }) => {
                     Delete
                   </button>
                 </td>
-                <td>{product.discountStatus}</td>
+                {/* <td>{product.discountStatus}</td> */}
+                <td>
+                  <button
+                    onClick={() => descriptionpP(product.nameProduct)}
+                    // onClick={() => showStatueProduct(product._id)}
+                    className="btn btn-info"
+                  >
+                    Show
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>
